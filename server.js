@@ -7,7 +7,7 @@ let json = require("./sobreMim.json")
 const server = http.createServer((req, res) => {
     
   // Definindo cabeçalhos de resposta
-  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.writeHead(200, { 'Content-Type': 'application/json' });
 
   // Enviando uma resposta HTML
   res.end(JSON.stringify(json));
