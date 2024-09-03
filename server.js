@@ -1,14 +1,16 @@
+
+
 const http = require('http');
 
+let json = require("./sobreMim.json")
 // Criando o servidor
 const server = http.createServer((req, res) => {
+    
   // Definindo cabeçalhos de resposta
   res.writeHead(200, { 'Content-Type': 'text/html' });
 
   // Enviando uma resposta HTML
-  res.end(
-
-  );
+  res.end(JSON.stringify(json));
 });
 
 // Fazendo o servidor ouvir na porta 3000
